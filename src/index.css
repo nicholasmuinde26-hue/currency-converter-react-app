@@ -1,0 +1,87 @@
+:root {
+  --dark-grey: #1b1b32;
+  --light-grey: #f5f6f7;
+  --dark-orange: #f89808;
+  --yellow: #f1be32;
+  --golden-yellow: #feac32;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--dark-grey);
+  background-color: var(--dark-grey);
+  margin: 0;
+  padding: 0;
+}
+
+.converter {
+  background-color: var(--light-grey);
+  width: 90%;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.converter h1 {
+  margin-bottom: 20px;
+  color: var(--dark-grey);
+}
+
+.converter input[type="number"],
+.converter select {
+  width: 80%;
+  max-width: 300px;
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid var(--golden-yellow);
+  border-radius: 6px;
+  font-size: 1rem;
+  color: var(--dark-grey);
+}
+
+.converter input[type="number"]:focus,
+.converter select:focus {
+  outline: none;
+  border-color: var(--dark-orange);
+}
+
+.converter p {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--dark-orange);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .converter {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .converter input[type="number"],
+  .converter select {
+    width: 100%;
+    max-width: none;
+  }
+
+  .converter h1 {
+    font-size: 1.5rem;
+  }
+
+  .converter p {
+    font-size: 1rem;
+  }
+}
